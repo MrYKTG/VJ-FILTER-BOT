@@ -1,6 +1,5 @@
 # Don't Remove Credit @VJ_Botz
-# SubscrHTML
-YouTube Channel For Amazing Bot @Tech_VJ
+# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
 import os, logging, string, asyncio, time, re, ast, random, math, pytz, pyrogram
@@ -2049,8 +2048,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         buttons = [[
              InlineKeyboardButton('⚙️ ᴀᴅᴍɪɴ ᴏɴʟʏ 🔧', callback_data='admin'),
-         ], [
-             InlineKeyboardButton('‼️ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
          ], [ 
              InlineKeyboardButton('ʀᴇɴᴀᴍᴇ', callback_data='r_txt'),   
              InlineKeyboardButton('sᴛʀᴇᴀᴍ/ᴅᴏᴡɴʟᴏᴀᴅ', callback_data='s_txt') 
@@ -2066,9 +2063,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
          ], [
              InlineKeyboardButton('ꜱᴏɴɢ', callback_data='song'),
              InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ', callback_data='shortlink_info')
-         ], [
-             InlineKeyboardButton('font', callback_data='font'),
-             InlineKeyboardButton('ᴄᴏᴠɪᴅ', callback_data='corona')
          ], [
              InlineKeyboardButton('ꜱᴛɪᴄᴋᴇʀ-ɪᴅ', callback_data='sticker'),
              InlineKeyboardButton('ᴊ-ꜱᴏɴ', callback_data='json')
@@ -2089,22 +2083,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('‼️ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ‼️', callback_data='disclaimer'),
-        ],[
-            InlineKeyboardButton('• ᴠɪsɪᴛ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ •', url="t.me/Xeonflix"),
-        ],[
+        ], [
+            InlineKeyboardButton ('• ᴠɪsɪᴛ ᴏᴜʀ ᴄᴏᴍᴍᴜɴɪᴛʏ •', url="t.me/Xeonflix"),
+        ], [
             InlineKeyboardButton('• ᴏᴡɴᴇʀ •', user_id=int(6497757690)),
             InlineKeyboardButton('• ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ •', callback_data='source')
-        ],[
+        ], [
             InlineKeyboardButton('🛰️ ʀᴇɴᴅᴇʀɪɴɢ ꜱᴛᴀᴛᴜꜱ ☁️',callback_data='rendr')
-        ],[
+        ], [
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.edit_message_media(
-            query.message.chat.id,
-            query.message.id,
-            InputMediaPhoto(random.choice(PICS))
-        )
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
@@ -2191,37 +2180,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "font":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.FONT_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-         )
-     elif query.data == "corona":
-        buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
-        ]]
-        await client.edit_message_media(
-            query.message.chat.id, 
-            query.message.id, 
-            InputMediaPhoto(random.choice(PICS))
-        )
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.CORONA_TXT,
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-       )
     elif query.data == "coct":
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
