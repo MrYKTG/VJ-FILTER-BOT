@@ -1,6 +1,6 @@
 # Don't Remove Credit @VJ_Botz
 # SubscrHTML
-YouTube Channel For Amazing Bot @Tech_VJ
+# YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
 import os, logging, string, asyncio, time, re, ast, random, math, pytz, pyrogram
